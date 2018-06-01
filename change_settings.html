@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Github Repo Details</title>
+    <link rel="stylesheet" href="settings.css">
+    <script src="jquery.min.js"></script>
+</head>
+<script src="background.js"></script>
+
+<body>
+    <div class="change-form">
+        <table>
+            <caption>Your Repo Details </caption>
+            <tr>
+                <td>
+                    <label>Owner Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="owner_name_txt" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Repo Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="repo_name_txt" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>File Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="file_name_txt" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Access Token:</label>
+                </td>
+                <td>
+                    <textarea id='access_token_txt'></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="required-note">
+                    To get Access Token : Profile -> Settings -> Developr Settings ->Personal access tokens
+                    
+                </td>
+            </tr>
+
+            <tr>
+                    <td colspan="2" class="required-note">                        
+                        Access Token should be given permission with read/write repos.
+                    </td>
+                </tr>
+
+
+            <tr>
+                <td colspan="2" class="required-note">
+                    * All fields are required
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <button id="save_changes">Save Changes</button>
+                </td>
+                <td>
+                    <button id="clear_fields">Clear</button>
+                </td>
+            </tr>
+
+
+
+    </div>
+
+</body>
+
+</html>

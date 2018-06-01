@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Github link saver",
+  "description": "This extension will save your browser links in github repo , kind of bookmarks saver",
+  "version": "1.0",
+  "author":"Sankar Rajendran",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "jquery.min.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "http://api.github.com/*",
+    "activeTab"
+  ],
+  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
+}
