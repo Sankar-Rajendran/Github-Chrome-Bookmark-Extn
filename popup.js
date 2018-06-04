@@ -4,11 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //var saveButton = $('#save_link');
 
-
-
     function saveURL(url) {
-
-
         var ownerName = localStorage.getItem("owner_name");
         var repoName = localStorage.getItem("repo_name");
         var fileName = localStorage.getItem("file_name");
@@ -22,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return false;
         }
 
-        var newLink = '[' + url + ']';
+        var newLink = url;
 
         var saveButton1 = $('#save_link');
 
@@ -47,15 +43,24 @@ document.addEventListener('DOMContentLoaded', function () {
                     data: JSON.stringify(dataObject),
                     success: function (result) {
                         console.log(result);
+                        $('#popup_content').html('<p class="message">Your link has been saved successfully...!!!</p>');
+                        setTimeout(function () {
+                            window.close();
+                        }, 3000);
                     },
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader('Authorization', 'BEARER ' + accessToken);
                     },
                     error: function (error) {
                         console.log(error);
+                        $('#popup_content').html('<p class="message">Oops...Something went wrong,Kindly check you repo details...!!!</p>');
                     }
                 });
 
+            },
+            error: function (error) {
+                console.log(error);
+                $('#popup_content').html('<p class="message">Oops..Something went wrong.Kindly check you repo details...!!!</p>');
             }
         });
     }

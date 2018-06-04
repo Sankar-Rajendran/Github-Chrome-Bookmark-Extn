@@ -1,13 +1,25 @@
 Button{
     border-radius: 5px;
-    background-color: rgb(153, 241, 70);
+    background-color: rgb(125, 201, 252);
     color: black;
     font-family: sans-serif;
     font-weight: bold;
     cursor: pointer;
+    width:100px;
 }
 
 Button:hover {
-    background-color: rgb(4, 94, 9);
+    background-color:  rgb(77, 171, 233);
     color: white;
+}
+
+body{
+    background-color:  rgb(184, 221, 247);
+}
+
+
+.message{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;    
+    font-size: 18;
 }

@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fileNameElement.value = localStorage.getItem("file_name");
     accessTokenElement.value = localStorage.getItem("access_token");
 
-
     var clearFields = (fromButton) => {
         ownerNameElement.value = repoNameElement.value = fileNameElement.value = accessTokenElement.value = '';
 

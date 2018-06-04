@@ -17,6 +17,11 @@
     padding: 10px; 
 }
 
+
+textarea{
+    -webkit-text-security : circle;
+}
+
 table{
     padding: 10px;
 }
